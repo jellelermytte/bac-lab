@@ -2,23 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   # ✏️ Replace YOUR_NAME with your name (lowercase, no spaces)
-  name: nginx-lab-YOUR_NAME
+  name: nginx-lab-jelle-lermytte
   # ✏️ Replace YOUR_STUDENT_ID with your student ID, e.g. student-12
-  namespace: bac-lab-YOUR_STUDENT_ID
+  namespace: bac-lab-student-09
   labels:
     app: nginx-lab
-    trainee: YOUR_NAME
+    trainee: JelleLermytte
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: nginx-lab
-      trainee: YOUR_NAME
+      trainee: jellelermytte
   template:
     metadata:
       labels:
         app: nginx-lab
-        trainee: YOUR_NAME
+        trainee: jellelermytte
     spec:
       containers:
         - name: nginx
